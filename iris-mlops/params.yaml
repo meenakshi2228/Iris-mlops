@@ -1,0 +1,10 @@
+remove_rows: [5,10]
+
+update:
+  enabled: false
+  row: 5
+  feature: "sepal length (cm)"
+  value: 6.5
+
+hidden_layers: [10, 5]
+max_iter: 1000
