@@ -1,7 +1,8 @@
 import joblib
 from fastapi import FastAPI
-from prometheus_fastapi_instrumentator import Instrumentor
 from pydantic import BaseModel
+from prometheus_fastapi_instrumentator 
+import Instrumentator
 
 app = FastAPI()
 Instrumentor().instrument(app).expose(app)
