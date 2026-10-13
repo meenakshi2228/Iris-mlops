@@ -1,9 +1,10 @@
 import joblib
 from fastapi import FastAPI
+from prometheus_fastapi_instrumentator import Instrumentor
 from pydantic import BaseModel
 
 app = FastAPI()
-
+Instrumentor().instrument(app).expose(app)
 model = joblib.load("models/iris_model.joblib")
 
 flower_names = ["Setosa", "Versicolor", "Virginica"]
